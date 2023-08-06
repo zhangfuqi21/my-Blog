@@ -1,19 +1,21 @@
 import React, { memo } from "react";
 import { MainWarpper } from "./style";
-import { Card, CardBody, Image, Stack } from "@chakra-ui/react";
+import "@/assets/iconfont/iconfont.css";
+
+import HomeLeftCard from "./HomeLeftCard/HomeLeftCard";
+import HomeMidCard from "./HomeMidCard/HomeMidCard";
+import HomeRightCard from "./HomeRightCard/HomeRightCard";
 const HomeMain = memo(() => {
   return (
     <MainWarpper>
       <div className="ui container">
-        <Card>
-          <Image
-            src="https://naccl.top/img/avatar.jpg"
-            boxSize="265px"
-            alt="Green double couch with wooden legs"
-          ></Image>
-        </Card>
+        <HomeLeftCard />
+        <div className="w">
+          <HomeMidCard />
+          <HomeMidCard />
+        </div>
+        <HomeRightCard />
       </div>
-      <Stack></Stack>
     </MainWarpper>
   );
 });
