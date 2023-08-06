@@ -4,7 +4,7 @@ import React, { memo } from "react";
 import { css } from "@emotion/react";
 import AppHeader from "../../components/App-Header/AppHeader";
 import HomeMain from "./components/HomeMain";
-export async function getProjects() {
+async function getProjects() {
   const res = await fetch("https://lancao.usemock.com/headerList");
   const listSSR = await res.json();
   return listSSR;
