@@ -9,7 +9,7 @@ const HomeMain = memo(() => {
   return (
     <MainWarpper>
       <div className="ui container">
-        <HomeLeftCard />
+        <HomeLeftCard  />
         <div className="w">
           <HomeMidCard />
           <HomeMidCard />
