@@ -1,27 +1,52 @@
 import React, { memo } from "react";
-import { ItemWarpper } from "./style";
+import ItemWarpper  from "./style";
 import { Box, Text } from "@chakra-ui/react";
-const ArticleItem = memo(() => {
+import dayjs from "dayjs";
+interface improps {
+  list: {
+    createTime: string;
+    firstPicture: string;
+    id: number;
+    password: string;
+    privacy: boolean;
+    title: string;
+  };
+}
+const ArticleItem: React.FC<improps> = memo((props: improps) => {
+  const list = props.list;
+
   return (
-    <ItemWarpper>
-      <Box position="relative" className="item" w="238px" padding="5px 15px">
+    <ItemWarpper list={list.firstPicture}>
+      <div className="mask"></div>
+      <Box
+        position="relative"
+        className="item"
+        w="238px"
+        padding="5px 15px"
+        border={"0.3px solid black"}
+        borderRadius={"5px"}
+      >
         <Text
           left="6"
-          color="#FFF"
+          color="#29b989"
           position="absolute"
-          bottom="8"
+          bottom="6"
           fontSize="xs"
         >
-          2021-03-31
+          {dayjs(list.createTime).format("YYYY/MM/DD")}
         </Text>
         <Text
+          w={"80%"}
+          whiteSpace={"nowrap"}
+          overflow={"hidden"}
+          textOverflow={"ellipsis"}
           left="6"
-          color="#FFF"
+          color="#2985b9"
           position="absolute"
-          bottom="4"
+          bottom="2"
           fontSize="sm"
         >
-          短链接服务
+          {list.title}
         </Text>
       </Box>
     </ItemWarpper>

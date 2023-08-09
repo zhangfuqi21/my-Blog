@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 export const MainWarpper = styled.div`
   width: 100%;
-  margin-top: 100vh;
-  height: 1000px;
+  margin-top: 70px;
+  /* height: 1000px; */
 
   .ui {
     width: 1400px;
@@ -10,6 +10,7 @@ export const MainWarpper = styled.div`
     margin-right: auto;
   }
   .container {
+    z-index: 1;
     display: flex;
   }
   .w {

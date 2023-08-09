@@ -1,7 +1,8 @@
 [
   {
     "name": "首页",
-    "spread": []
+    "spread": [],
+    "path": ""
   },
   {
     "name": "分类",
@@ -10,22 +11,27 @@
       { "name": "个人项目" },
       { "name": "技术杂烩" },
       { "name": "心情随写" }
-    ]
+    ],
+    "path": ""
   },
   {
     "name": "归档",
-    "spread": []
+    "spread": [],
+    "path": ""
   },
   {
     "name": "动态",
-    "spread": []
+    "spread": [],
+    "path": ""
   },
   {
     "name": "友人帐",
-    "spread": []
+    "spread": [],
+    "path": ""
   },
   {
     "name": "关于我",
-    "spread": []
+    "spread": [],
+    "path": "about"
   }
 ]

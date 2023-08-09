@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 export const HomeWarpper = styled.div`
   .bg {
     background-image: url(https://cdn.naccl.top/blog/img/bg1.jpg);
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;

@@ -1,11 +1,13 @@
+"use client";
+
 import React, { memo } from "react";
 import { CardWapper } from "./style";
 import { Box, Card, VStack, Text, Image, IconButton } from "@chakra-ui/react";
 import HomeAccordion from "../HomeAccordion/HomeAccordion";
-const HomeLeftCard = memo(() => {
+const HomeLeftCard = memo((props: any) => {
   return (
     <CardWapper>
-      <Card align="center" className="card">
+      <Card zIndex={"-1"} align="center" className="card">
         <VStack>
           <Box>
             <Image
@@ -15,7 +17,7 @@ const HomeLeftCard = memo(() => {
             ></Image>
           </Box>
           <Box>
-            <h3>Naccl</h3>
+            <h3>{props.list.introduction.name}</h3>
           </Box>
           <Box>
             <Text fontSize="xs">游龙当归海，海不迎我自来也</Text>

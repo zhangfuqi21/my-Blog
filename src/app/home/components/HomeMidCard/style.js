@@ -13,4 +13,9 @@ export const MidCardWarpper = styled.div`
   .mgleft {
     margin-left: 3px;
   }
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
