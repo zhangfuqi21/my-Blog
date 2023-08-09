@@ -10,7 +10,6 @@ interface tags {
 }
 const HomeMidCard = memo((props: any) => {
   const list = props.list;
-  console.log(list);
 
   return (
     <MidCardWarpper>

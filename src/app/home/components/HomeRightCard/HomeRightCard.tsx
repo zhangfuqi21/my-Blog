@@ -6,7 +6,6 @@ import TagItem from "./Components/TagItem/TagItem";
 import { useSelector } from "react-redux";
 const HomeRightCard = memo(() => {
   const list = useSelector((store: any) => store.home.site);
-  console.log(list);
 
   return (
     <RightCardWarpper>
