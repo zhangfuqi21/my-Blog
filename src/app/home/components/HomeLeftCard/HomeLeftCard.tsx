@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import React, { memo } from "react";
 import { CardWapper } from "./style";
@@ -7,7 +7,7 @@ import HomeAccordion from "../HomeAccordion/HomeAccordion";
 const HomeLeftCard = memo((props: any) => {
   return (
     <CardWapper>
-      <Card zIndex={"-1"} align="center" className="card">
+      <Card align="center" className="card">
         <VStack>
           <Box>
             <Image

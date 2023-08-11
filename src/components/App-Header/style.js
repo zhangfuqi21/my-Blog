@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 export const HeaderWapper = styled.div`
-  z-index: 999;
   .black {
     background-color: #1b1c1d;
     transition-property: all;
     transition-duration: 0.5s;
   }
   .header {
+    z-index: 999;
     transition-property: all;
     transition-duration: 0.5s;
     width: 100%;

@@ -14,7 +14,6 @@ const HomeMidCard = memo((props: any) => {
   return (
     <MidCardWarpper>
       <Card
-        zIndex={"-1"}
         margin="0 10px"
         w="864px"
         display="flex"
