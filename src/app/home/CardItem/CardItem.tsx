@@ -1,18 +1,17 @@
+import { Card, VStack, Text, Box, Button } from "@chakra-ui/react";
+import { CardItemWarpper } from "./style";
 import React, { memo } from "react";
-import { MidCardWarpper } from "./style";
 import dayjs from "dayjs";
-import { Box, Card, VStack, Text, Image, Button, Flex } from "@chakra-ui/react";
 interface tags {
   id: number | null | string;
   name: string;
   color: string;
   blogs: [];
 }
-const HomeMidCard = memo((props: any) => {
+const CardItem = memo((props: any) => {
   const list = props.list;
-
   return (
-    <MidCardWarpper>
+    <CardItemWarpper>
       <Card
         margin="0 10px"
         w="864px"
@@ -64,10 +63,6 @@ const HomeMidCard = memo((props: any) => {
               flexDirection="column"
               alignItems="center"
             >
-              {/* <Image
-                src="https://cdn.naccl.top/blog/blogHosting/2022/02/B01/first.jpg"
-                alt="Dan Abramov"
-              /> */}
               <Button marginTop="50px" colorScheme="teal" variant="outline">
                 阅读全文
               </Button>
@@ -102,8 +97,8 @@ const HomeMidCard = memo((props: any) => {
           })}
         </Box>
       </Card>
-    </MidCardWarpper>
+    </CardItemWarpper>
   );
 });
-HomeMidCard.displayName = "HomeMidCard";
-export default HomeMidCard;
+CardItem.displayName;
+export default CardItem;

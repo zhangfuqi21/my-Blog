@@ -3,7 +3,7 @@
 import React, { memo } from "react";
 import { CardWapper } from "./style";
 import { Box, Card, VStack, Text, Image, IconButton } from "@chakra-ui/react";
-import HomeAccordion from "../HomeAccordion/HomeAccordion";
+import HomeAccordion from "../Accordion/HomeAccordion";
 const HomeLeftCard = memo((props: any) => {
   return (
     <CardWapper>

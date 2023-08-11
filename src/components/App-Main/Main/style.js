@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-export const MainWarpper = styled.div`
+
+export const LayoutWarpper = styled.div`
   width: 100%;
   margin-top: 70px;
   /* height: 1000px; */

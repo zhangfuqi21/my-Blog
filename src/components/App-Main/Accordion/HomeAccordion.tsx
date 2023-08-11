@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 
 const HomeAccordion = memo(() => {
   const list = useSelector((store: any) => store.home.site);
-  console.log(list.introduction);
   const newList = list.introduction.favorites.map((item: any, index: any) => {
     const r = {
       key: index + 1,
@@ -15,11 +14,10 @@ const HomeAccordion = memo(() => {
     };
     return r;
   });
-  console.log(newList);
 
   return (
-    <AccordionWarpper >
-      <Collapse  bordered={false} accordion items={newList} />
+    <AccordionWarpper>
+      <Collapse bordered={false} accordion items={newList} />
     </AccordionWarpper>
   );
 });

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const MidCardWarpper = styled.div`
+export const CardItemWarpper = styled.div`
   :nth-child(n + 2) {
     margin-top: 50px;
   }
