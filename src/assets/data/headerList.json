@@ -17,17 +17,17 @@
   {
     "name": "归档",
     "spread": [],
-    "path": ""
+    "path": "archives"
   },
   {
     "name": "动态",
     "spread": [],
-    "path": ""
+    "path": "moments"
   },
   {
     "name": "友人帐",
     "spread": [],
-    "path": ""
+    "path": "friends"
   },
   {
     "name": "关于我",
