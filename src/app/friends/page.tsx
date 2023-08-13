@@ -16,7 +16,7 @@ const page = memo(() => {
       <Card w="864px" display="flex" backgroundColor="#fff" alignItems="center">
         <VStack align="stretch">
           <Box
-            borderBottom={"1px solid black"}
+            borderBottom={"1px solid #e8e9e9"}
             w={"100%"}
             display={"flex"}
             justifyContent={"center"}
@@ -74,7 +74,7 @@ const page = memo(() => {
               仅凭个人喜好添加友链，请在收到我的回复邮件后再于贵站添加本站链接。原则上已添加的友链不会删除，如果你发现自己被移除了，恕不另行通知，只需和我一样做就好。
             </Text>
           </VStack>
-          <hr className="hr"/>
+          <hr className="hr" />
         </VStack>
       </Card>
     </FriendsWarpper>

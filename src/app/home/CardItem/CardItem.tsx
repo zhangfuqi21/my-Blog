@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, VStack, Text, Box, Button } from "@chakra-ui/react";
 import { CardItemWarpper } from "./style";
 import React, { memo } from "react";

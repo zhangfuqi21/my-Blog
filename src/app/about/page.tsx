@@ -11,7 +11,7 @@ import {
 import React, { memo } from "react";
 import { AboutWarpper } from "./style";
 
-const page: React.FC = memo(async () => {
+const page: React.FC = memo(() => {
   return (
     <AboutWarpper>
       <Card
@@ -39,7 +39,7 @@ const page: React.FC = memo(async () => {
               w={"100%"}
               fontWeight={"700"}
               fontSize="xl"
-              borderBottom={"1px solid black"}
+              borderBottom={"1px solid #e8e9e9"}
             >
               目前可以公开的情报
             </Text>
@@ -57,7 +57,7 @@ const page: React.FC = memo(async () => {
             w={"100%"}
             fontWeight={"700"}
             fontSize="xl"
-            borderBottom={"1px solid black"}
+            borderBottom={"1px solid #e8e9e9"}
           >
             我 & 博客
           </Text>

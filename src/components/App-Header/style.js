@@ -29,6 +29,7 @@ export const HeaderWapper = styled.div`
       color: #fff;
       font-size: 14px;
       font-weight: 700;
+      /* display: flex; */
     }
     .itemb {
       border-right: 1px solid #2d2e2f;

@@ -2,36 +2,36 @@
   {
     "name": "首页",
     "spread": [],
-    "path": ""
+    "path": "/home"
   },
   {
     "name": "分类",
     "spread": [
-      { "name": "学习笔记" },
-      { "name": "个人项目" },
-      { "name": "技术杂烩" },
-      { "name": "心情随写" }
+      { "label": "学习笔记", "key": "1", "path": "学习笔记" },
+      { "label": "个人项目", "key": "2", "path": "个人项目" },
+      { "label": "技术杂烩", "key": "3", "path": "技术杂烩" },
+      { "label": "心情随写", "key": "4", "path": "心情随写" }
     ],
     "path": ""
   },
   {
     "name": "归档",
     "spread": [],
-    "path": "archives"
+    "path": "/archives"
   },
   {
     "name": "动态",
     "spread": [],
-    "path": "moments"
+    "path": "/moments"
   },
   {
     "name": "友人帐",
     "spread": [],
-    "path": "friends"
+    "path": "/friends"
   },
   {
     "name": "关于我",
     "spread": [],
-    "path": "about"
+    "path": "/about"
   }
 ]

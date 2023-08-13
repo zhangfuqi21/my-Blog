@@ -18,7 +18,6 @@ const page = memo(async () => {
     data.blogMap[key].forEach((item: any) => {
       List.push({ label: key });
       List.push({ children: item.title });
-        
     });
   }
 
@@ -35,7 +34,7 @@ const page = memo(async () => {
       <Card w="864px" display="flex" backgroundColor="#fff" alignItems="center">
         <Box
           w={"100%"}
-          borderBottom={"1px solid black"}
+          borderBottom={"1px solid #e8e9e9 "}
           padding={"10px 0px"}
           alignItems={"center"}
           display={"flex"}
