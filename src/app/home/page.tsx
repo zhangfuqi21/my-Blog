@@ -3,7 +3,9 @@ import React, { memo } from "react";
 import { HomeWarpper } from "./style";
 import CardItem from "./CardItem/CardItem";
 async function getBlogs() {
-  const res = await fetch("https://lancao.usemock.com/blog/blogs");
+  const res = await fetch("https://lancao.usemock.com/blog/blogs", {
+    cache: "no-store",
+  });
   return res.json();
 }
 const page: React.FC = memo(async () => {
