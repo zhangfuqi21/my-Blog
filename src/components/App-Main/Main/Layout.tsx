@@ -31,6 +31,8 @@ export async function getSite() {
   const res = await fetch("https://lancao.usemock.com/blog/site", {
     next: { revalidate: 30 },
   });
+  console.log("layout get site");
+
   return res.json();
 }
 Layout.displayName;

@@ -6,6 +6,8 @@ async function getBlogs() {
   const res = await fetch("https://lancao.usemock.com/blog/blogs", {
     cache: "no-store",
   });
+  console.log("home blog");
+
   return res.json();
 }
 const page: React.FC = memo(async () => {
