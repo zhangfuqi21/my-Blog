@@ -18,11 +18,19 @@ const Layout = memo(async (props) => {
   );
 });
 export async function getBlogs() {
-  const res = await fetch("https://lancao.usemock.com/blog/blogs");
+  console.log(1);
+
+  const res = await fetch("https://lancao.usemock.com/blog/blogs", {
+    cache: "no-store",
+  });
+  console.log("layout");
+
   return res.json();
 }
 export async function getSite() {
-  const res = await fetch("https://lancao.usemock.com/blog/site");
+  const res = await fetch("https://lancao.usemock.com/blog/site", {
+    next: { revalidate: 30 },
+  });
   return res.json();
 }
 Layout.displayName;
