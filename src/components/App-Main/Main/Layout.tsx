@@ -1,14 +1,12 @@
-"use client";
-
 import React, { memo } from "react";
 import MainLayout from "./components/MainLayout";
-
 const Layout = memo(async (props) => {
   const [blogsList, siteList] = await Promise.all([
-    // await getProjects(),
     await getBlogs(),
     await getSite(),
   ]);
+  console.log(siteList.data);
+
   return (
     <div>
       <MainLayout site={siteList.data} list={blogsList.data}>
@@ -18,21 +16,15 @@ const Layout = memo(async (props) => {
   );
 });
 export async function getBlogs() {
-  console.log(1);
-
-  const res = await fetch("https://lancao.usemock.com/blog/blogs", {
-    cache: "no-store",
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API}/blogs`, {
+    // cache: "force-cache",
   });
-  console.log("layout");
-
   return res.json();
 }
 export async function getSite() {
-  const res = await fetch("https://lancao.usemock.com/blog/site", {
-    next: { revalidate: 30 },
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API}/site`, {
+    // cache: "force-cache",
   });
-  console.log("layout get site");
-
   return res.json();
 }
 Layout.displayName;

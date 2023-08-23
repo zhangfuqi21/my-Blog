@@ -3,9 +3,9 @@ import { RightCardWarpper } from "./style";
 import { Box, Card, VStack } from "@chakra-ui/react";
 import ArticleItem from "./Components/ArticleItem/ArticleItem";
 import TagItem from "./Components/TagItem/TagItem";
-import { useSelector } from "react-redux";
+import { useSelector, shallowEqual } from "react-redux";
 const HomeRightCard = memo(() => {
-  const list = useSelector((store: any) => store.home.site);
+  const list = useSelector((store: any) => store.home.site, shallowEqual);
 
   return (
     <RightCardWarpper>

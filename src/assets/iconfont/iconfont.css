@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4199272 */
-  src: url('iconfont.woff2?t=1691311214747') format('woff2'),
-       url('iconfont.woff?t=1691311214747') format('woff'),
-       url('iconfont.ttf?t=1691311214747') format('truetype');
+  src: url('iconfont.woff2?t=1692776024883') format('woff2'),
+       url('iconfont.woff?t=1692776024883') format('woff'),
+       url('iconfont.ttf?t=1692776024883') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,10 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-huidaodingbu:before {
+  content: "\e600";
 }
 
 .icon-Pen:before {

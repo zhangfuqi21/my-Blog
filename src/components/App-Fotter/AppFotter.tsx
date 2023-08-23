@@ -1,8 +1,12 @@
 import React, { memo } from "react";
 import { FotterWarpper } from "./style";
 import Link from "next/link";
-import { Box, HStack, VStack, Image, Text, Center } from "@chakra-ui/react";
+import { shallowEqual, useSelector } from "react-redux";
+import { Box, HStack, VStack, Image, Text } from "@chakra-ui/react";
 const AppFotter: React.FC = memo(() => {
+  const list = useSelector((store: any) => store.home.site, shallowEqual);
+  console.log(list.newBlogList);
+
   return (
     <FotterWarpper>
       <footer>
@@ -12,7 +16,7 @@ const AppFotter: React.FC = memo(() => {
               <Box w={216} h={162} borderRight={"1px solid #444546"}>
                 <VStack>
                   <Text color={"#fff"} marginTop={4}>
-                    手机看本站
+                    {list.siteInfo?.footerImgTitle}
                   </Text>
                   <Image
                     boxSize={100}
@@ -25,15 +29,17 @@ const AppFotter: React.FC = memo(() => {
               <Box w={433} height={162} borderRight={"1px solid #444546"}>
                 <VStack marginTop={4}>
                   <Text color={"#fff"}>最新博客</Text>
-                  <Text color={"#aeb1b1"} marginTop={1}>
-                    2022 年度总结
-                  </Text>
-                  <Text color={"#aeb1b1"} marginTop={1}>
-                    关于我从乌克兰局势想到密码学这档事
-                  </Text>
-                  <Text color={"#aeb1b1"} marginTop={1}>
-                    2021 年度总结
-                  </Text>
+                  {list.newBlogList?.map((item: any, index: number) => {
+                    if (index < 3) {
+                      return (
+                        <Link href={`/blog/${item.id}`} key={item.id}>
+                          <Text color={"#aeb1b1"} marginTop={1}>
+                            {item.title}
+                          </Text>{" "}
+                        </Link>
+                      );
+                    }
+                  })}
                 </VStack>
               </Box>
               <Box w={505} height={162}>
@@ -62,10 +68,10 @@ const AppFotter: React.FC = memo(() => {
               paddingTop={10}
             >
               <Text fontWeight={700} fontSize={16} color={"#7c7d7d"}>
-                Copyright © 2019 - 2023
+                {list.siteInfo?.copyright.title}
               </Text>
               <Text fontWeight={700} fontSize={16} color={"#aa9c22"}>
-                NACCL`S BLOG
+                {list.siteInfo?.blogName}
               </Text>
               <Text fontWeight={700} fontSize={16} color={"#989999"}>
                 本网站由 又拍云 提供云存储服务
@@ -75,64 +81,27 @@ const AppFotter: React.FC = memo(() => {
               </Text>
             </HStack>
             <HStack>
-              <Box
-                borderRadius={5}
-                overflow={"hidden"}
-                color={"#fff"}
-                fontSize={12}
-                display={"flex"}
-              >
-                <Link className="link" href={"/1"}>
-                  <Box padding={"1"} bgColor={"#5f5f5f"}>
-                    lancao
+              {list.badges?.map((item: any, index: number) => {
+                return (
+                  <Box
+                    key={index}
+                    borderRadius={5}
+                    overflow={"hidden"}
+                    color={"#fff"}
+                    fontSize={12}
+                    display={"flex"}
+                  >
+                    <Link className="link" href={item.url}>
+                      <Box padding={"1"} bgColor={"#5f5f5f"}>
+                        {item.subject}
+                      </Box>
+                      <Box padding={"1"} bgColor={item.color}>
+                        {item.value}
+                      </Box>
+                    </Link>
                   </Box>
-                  <Box padding={"1"} bgColor={"#5ccb34"}>
-                    Open Scource
-                  </Box>
-                </Link>
-              </Box>
-              <Box
-                borderRadius={5}
-                overflow={"hidden"}
-                color={"#fff"}
-                fontSize={12}
-                display={"flex"}
-              >
-                <Box padding={"1"} bgColor={"#5f5f5f"}>
-                  UI
-                </Box>
-                <Box padding={"1"} bgColor={"#47c1b7"}>
-                  Chakara
-                </Box>
-              </Box>
-              <Box
-                borderRadius={5}
-                overflow={"hidden"}
-                color={"#fff"}
-                fontSize={12}
-                display={"flex"}
-              >
-                <Box padding={"1"} bgColor={"#5f5f5f"}>
-                  VPS
-                </Box>
-                <Box padding={"1"} bgColor={"#9245d9"}>
-                  Vercel
-                </Box>
-              </Box>
-              <Box
-                borderRadius={5}
-                overflow={"hidden"}
-                color={"#fff"}
-                fontSize={12}
-                display={"flex"}
-              >
-                <Box padding={"1"} bgColor={"#5f5f5f"}>
-                  lancao
-                </Box>
-                <Box padding={"1"} bgColor={"#5ccb34"}>
-                  By 1.0
-                </Box>
-              </Box>
+                );
+              })}
             </HStack>
           </VStack>
         </Box>

@@ -8,7 +8,7 @@ import { WithRedux } from "@/store/withRedux";
 import list from "@/assets/data/headerList.json";
 import AppMain from "@/components/App-Main/AppMain";
 import { Suspense } from "react";
-import Loading from "./loading/loading";
+// import Loading from "./loading/loading";
 
 // export const metadata: Metadata = {
 //   title: "Blog",

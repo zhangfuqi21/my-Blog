@@ -10,4 +10,7 @@ export const MomentsWarpper = styled.div`
   .pd10:last-child {
     padding-bottom: 30px;
   }
+  .text {
+    width: 100%;
+  }
 `;

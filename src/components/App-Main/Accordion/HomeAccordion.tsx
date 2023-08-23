@@ -1,11 +1,14 @@
+"use client";
 import React, { memo } from "react";
 import { AccordionWarpper } from "./style";
 // import type { CollapseProps } from "antd";
 import { Collapse } from "antd";
-import { useSelector } from "react-redux";
+import { shallowEqual, useSelector } from "react-redux";
 
 const HomeAccordion = memo(() => {
-  const list = useSelector((store: any) => store.home.site);
+  const list = useSelector((store: any) => store.home.site, shallowEqual);
+  console.log(list);
+
   const newList = list.introduction.favorites.map((item: any, index: any) => {
     const r = {
       key: index + 1,
