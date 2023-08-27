@@ -1,14 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-let assetPrefix = `/${repo}/`;
-let basePath = `/${repo}`;
-const isGithubActions = process.env.GITHUB_ACTIONS || false;
-if (isGithubActions) {
-  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
-  assetPrefix = `/${repo}/`;
-  basePath = `/${repo}`;
-}
-
 const nextConfig = {
   async redirects() {
     return [
@@ -18,12 +9,6 @@ const nextConfig = {
         permanent: true,
       },
     ];
-  },
-  assetPrefix,
-  basePath,
-  reactStrictMode: true,
-  images: {
-    unoptimized: true,
   },
 };
 
