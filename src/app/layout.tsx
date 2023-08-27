@@ -22,12 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         <meta
           http-equiv="Content-Security-Policy"
           content="upgrade-insecure-requests"
         ></meta>
-      </head>
+      </head> */}
+
       <body>
         <Providers>
           <WithRedux>
