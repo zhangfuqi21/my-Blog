@@ -8,7 +8,7 @@ const getMoments: any = async (id: string) => {
   return res.json();
 };
 const page = memo(async ({ params }: { params: { slug: string } }) => {
-  const id = decodeURIComponent(params.slug);
+  const id = decodeURIComponent(params.slug || "0");
 
   const res = await getMoments(id);
   console.log(res);
